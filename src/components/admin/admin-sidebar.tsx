@@ -9,6 +9,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import {
   ChevronDown,
+  LayoutDashboard,
   Truck,
   Users,
   Calendar,
@@ -28,6 +29,11 @@ type SidebarItem = {
 };
 
 const sidebarItems: SidebarItem[] = [
+  {
+    name: "Dashboard",
+    href: "/admin",
+    icon: LayoutDashboard,
+  },
   {
     name: "Fleet Management",
     href: "/admin/fleet",
