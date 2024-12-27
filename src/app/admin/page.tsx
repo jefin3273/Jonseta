@@ -1,25 +1,31 @@
-import { Metadata } from "next"
-import Image from "next/image"
-import { Activity, Truck, Users, DollarSign, BarChart } from 'lucide-react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Overview } from "@/components/dashboard/overview"
-import { RecentActivity } from "@/components/dashboard/recent-activity"
+import { Metadata } from "next";
+import { Activity, Truck, Users, DollarSign, BarChart } from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Overview } from "@/components/dashboard/overview";
+import { RecentActivity } from "@/components/dashboard/recent-activity";
+import { AdminHeader } from "@/components/admin/admin-header";
 
 export const metadata: Metadata = {
   title: "Admin Dashboard",
   description: "Admin dashboard for fleet management",
-}
+};
 
 export default function AdminDashboard() {
   return (
     <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
-      <div className="flex items-center justify-between space-y-2">
-        <h2 className="text-3xl font-bold tracking-tight">Dashboard</h2>
-      </div>
+      <AdminHeader title="Dashboard" />
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Total Vehicles</CardTitle>
+            <CardTitle className="text-sm font-medium">
+              Total Vehicles
+            </CardTitle>
             <Truck className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
@@ -44,17 +50,23 @@ export default function AdminDashboard() {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">$45,231.89</div>
-            <p className="text-xs text-muted-foreground">+20.1% from last month</p>
+            <p className="text-xs text-muted-foreground">
+              +20.1% from last month
+            </p>
           </CardContent>
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Driver Performance</CardTitle>
+            <CardTitle className="text-sm font-medium">
+              Driver Performance
+            </CardTitle>
             <Users className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">+573</div>
-            <p className="text-xs text-muted-foreground">+201 since last hour</p>
+            <p className="text-xs text-muted-foreground">
+              +201 since last hour
+            </p>
           </CardContent>
         </Card>
       </div>
@@ -70,9 +82,7 @@ export default function AdminDashboard() {
         <Card className="col-span-3">
           <CardHeader>
             <CardTitle>Recent Activity</CardTitle>
-            <CardDescription>
-              You made 265 trips this month.
-            </CardDescription>
+            <CardDescription>You made 265 trips this month.</CardDescription>
           </CardHeader>
           <CardContent>
             <RecentActivity />
@@ -80,6 +90,5 @@ export default function AdminDashboard() {
         </Card>
       </div>
     </div>
-  )
+  );
 }
-
