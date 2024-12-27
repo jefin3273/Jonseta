@@ -6,6 +6,7 @@ import {
 } from "@clerk/nextjs";
 import { Navbar } from "./components/Navbar"; // Ensure the path is correct
 import "./globals.css";
+import Page from "./page";
 
 export default function RootLayout({
   children,
@@ -19,9 +20,7 @@ export default function RootLayout({
           <Navbar />
           <div className="container mx-auto">
             <SignedOut>
-              <div className="flex justify-center items-center h-screen">
-                <SignInButton />
-              </div>
+              <Page />
             </SignedOut>
             <SignedIn>{children}</SignedIn>
           </div>
