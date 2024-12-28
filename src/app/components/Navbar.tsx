@@ -58,16 +58,6 @@ const Logo = () => (
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const navItems = [
-    { name: "Home", href: "/" },
-    { name: "Hospitals", href: "/hospitals" },
-    { name: "Specialists", href: "/specialists" },
-    { name: "Contact", href: "/Contact" },
-    { name: "Chatbot", href: "/chatbot" },
-    { name: "Blog", href: "/Blog" },
-    { name: "About", href: "../app/About" },
-  ];
-
   return (
     <ClerkProvider>
       <nav className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b border-border/40">
@@ -76,15 +66,6 @@ export function Navbar() {
             {/* Logo */}
             <div className="flex items-center space-x-4">
               <Logo />
-            </div>
-
-            {/* Navigation Items */}
-            <div className="hidden md:flex md:space-x-6">
-              {navItems.map((item) => (
-                <NavLink key={item.name} href={item.href}>
-                  {item.name}
-                </NavLink>
-              ))}
             </div>
 
             {/* Buttons */}
@@ -139,16 +120,6 @@ export function Navbar() {
             </div>
           </div>
         </div>
-
-        {/* Mobile Menu */}
-        <div className={`md:hidden ${mobileMenuOpen ? "block" : "hidden"}`}>
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navItems.map((item) => (
-              <NavLink key={item.name} href={item.href}>
-                {item.name}
-              </NavLink>
-            ))}
-          </div>
           <div className="pt-4 pb-3 border-t border-border/40">
             <SignedOut>
               <div className="mt-3 px-2 space-y-1">
@@ -196,7 +167,6 @@ export function Navbar() {
               </div>
             </SignedIn>
           </div>
-        </div>
       </nav>
     </ClerkProvider>
   );
