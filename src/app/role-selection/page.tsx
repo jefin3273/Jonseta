@@ -15,22 +15,22 @@ const roles = [
   {
     title: "Driver",
     description: "Access routes and delivery information",
-    path: "/driver/dashboard",
+    path: "../register/driver",
   },
   {
     title: "Employer",
     description: "Oversee company operations and staff",
-    path: "/employer/dashboard",
+    path: "../register/employer",
   },
   {
     title: "Employee",
     description: "View assignments and schedules",
-    path: "/employee/dashboard",
+    path: "../register/employee",
   },
   {
     title: "Vendor",
     description: "Manage services and contracts",
-    path: "/vendor/dashboard",
+    path: "../register/vendor",
   },
 ];
 
