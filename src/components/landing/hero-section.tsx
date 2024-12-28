@@ -8,6 +8,25 @@ export function HeroSection() {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 xl:py-0 bg-white text-black">
       <div className="container px-4 md:px-6">
+        {/* Top navigation buttons */}
+        <div className="flex justify-end space-x-4 mb-4">
+          <Link href="/admin">
+            <Button>Admin Page</Button>
+          </Link>
+          <Link href="/vendor">
+            <Button>Vendor Page</Button>
+          </Link>
+          <Link href="/driver">
+            <Button>Driver Page</Button>
+          </Link>
+          <Link href="/employer">
+            <Button>Employer Page</Button>
+          </Link>
+          <Link href="/employee">
+            <Button>Employee Page</Button>
+          </Link>
+        </div>
+
         <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
           <motion.img
             src="/hero-image.webp"

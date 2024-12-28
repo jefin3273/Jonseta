@@ -3,6 +3,7 @@ import Link from "next/link";
 import { HeroSection } from "@/components/landing/hero-section";
 import { FeaturesSection } from "@/components/landing/features-section";
 import { CTASection } from "@/components/landing/cta-section";
+import { Button } from "react-day-picker";
 
 export const metadata: Metadata = {
   title: "FleetWise - Intelligent Fleet Management",
