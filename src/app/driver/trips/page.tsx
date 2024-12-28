@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Link from "next/link";
 import { DriverHeader } from "@/components/driver/driver-header";
 import { Button } from "@/components/ui/button";
 import {
@@ -17,7 +16,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { MapPin, Calendar, Clock } from "lucide-react";
+import { MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Assigned Trips",

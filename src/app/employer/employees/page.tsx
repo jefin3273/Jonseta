@@ -40,17 +40,25 @@ import {
 export default function ManageEmployeesPage() {
   const [employees, setEmployees] = useState(initialEmployees);
 
-  const handleAddEmployee = (newEmployee) => {
+  interface Employee {
+    id: number;
+    name: string;
+    department: string;
+    email: string;
+    bookingPermission: string;
+  }
+
+  const handleAddEmployee = (newEmployee: Omit<Employee, "id">) => {
     setEmployees([...employees, { ...newEmployee, id: employees.length + 1 }]);
   };
 
-  const handleRemoveEmployee = (id) => {
+  const handleRemoveEmployee = (id: number) => {
     setEmployees(employees.filter((employee) => employee.id !== id));
   };
 
-  const handleUpdatePermission = (id, newPermission) => {
+  const handleUpdatePermission = (id: number, newPermission: string) => {
     setEmployees(
-      employees.map((employee) =>
+      employees.map((employee: Employee) =>
         employee.id === id
           ? { ...employee, bookingPermission: newPermission }
           : employee
@@ -132,15 +140,15 @@ export default function ManageEmployeesPage() {
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              const formData = new FormData(e.target);
+              const formData = new FormData(e.target as HTMLFormElement);
               const newEmployee = {
-                name: formData.get("name"),
-                department: formData.get("department"),
-                email: formData.get("email"),
-                bookingPermission: formData.get("bookingPermission"),
+                name: formData.get("name") as string,
+                department: formData.get("department") as string,
+                email: formData.get("email") as string,
+                bookingPermission: formData.get("bookingPermission") as string,
               };
               handleAddEmployee(newEmployee);
-              e.target.reset();
+              (e.target as HTMLFormElement).reset();
             }}
           >
             <div className="grid gap-4 py-4">

@@ -33,9 +33,14 @@ export default function SettingsPage() {
     }
   };
 
-  const handleAddRole = (departmentName, role) => {
+  interface Department {
+    name: string;
+    roles: string[];
+  }
+
+  const handleAddRole = (departmentName: string, role: string) => {
     setDepartments(
-      departments.map((dept) =>
+      departments.map((dept: Department) =>
         dept.name === departmentName
           ? { ...dept, roles: [...dept.roles, role] }
           : dept

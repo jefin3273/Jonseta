@@ -1,6 +1,5 @@
 import {
   ClerkProvider,
-  SignInButton,
   SignedIn,
   SignedOut,
 } from "@clerk/nextjs";

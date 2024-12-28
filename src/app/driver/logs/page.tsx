@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import { DriverHeader } from "@/components/driver/driver-header";
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -16,7 +15,6 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { MapPin, Clock, AlertTriangle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Trip Logs",

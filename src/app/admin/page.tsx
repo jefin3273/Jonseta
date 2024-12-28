@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { Activity, Truck, Users, DollarSign, BarChart } from "lucide-react";
+import { Activity, Truck, Users, DollarSign } from "lucide-react";
 import {
   Card,
   CardContent,

@@ -75,7 +75,7 @@ export default function RideSharing() {
       <Card>
         <CardHeader>
           <CardTitle>My Shared Rides</CardTitle>
-          <CardDescription>Rides you've joined or created</CardDescription>
+          <CardDescription>Rides you&apos;ve joined or created</CardDescription>
         </CardHeader>
         <CardContent>
           <Table>
